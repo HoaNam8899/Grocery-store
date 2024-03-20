@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* **************** */
+.container-margin-0 {
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+/* ******************** */
+.header-admin {
+    width: 100%;
+    height: 80px;
+    background-color: aquamarine;
+}
+
+.header-nav {
+    height: 80px;
+}
+
+.header-nav i {
+    font-size: 50px;
+}
+
+.header-nav i:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+/* ************** */
+.body-admin {
+    background-image: repeating-linear-gradient(-45deg, #6a6a6a 0, #6a6a6a 2px, #727272 2px, #727272 11px);
+}
+
+.body-nav {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(242, 151, 32);
+}
+
+.body-table {
+    width: 100%;
+    max-height: 80vh;
+}
+
+.table-height {
+    min-height: 65vh;
+}
+
+.containt-body {
+    background-color: #fff;
+}
+
+.table-nav button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.table-nav .search * {
+    margin: 0;
+}
+
+.search input {
+    height: 38px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.search select {
+    flex: 1;
+    margin: 0 5px 0 5px !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+    outline: 0 !important;
+}
+
+.image-product-admin {
+    width: 70px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* add product */
+/* .produc_name,
+.produc_description {} */
+
+/* add product */
+
+/* /// */
+.style-for-order {
+    padding: 10px;
+}
+
+.style-for-order span {
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+/* admin login */
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+/* body {
+    background: #020410;
+} */
+
+.header-a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/*-------------------------------------------------------------*/
+
+.background-a {
+    width: 100%;
+    height: 100vh;
+    background: url('../../public/images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+}
+
+#container-a {
+    position: absolute;
+    width: 75%;
+    height: 550px;
+    background-image: url('../../public/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    margin-top: 20px;
+    /* background-color: black; */
+}
+
+#container-a .content-a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background: transparent;
+    color: #e4e4e4;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content-a .logo-a {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-sci-a h2 {
+    font-size: 40px;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-sci-a h2 span {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-sci-a p {
+    font-size: 16px;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+#container-a .log-box-a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    /* background-color: rgb(187, 255, 0); */
+}
+
+.log-box-a .form-box-a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #e4e4e4;
+}
+
+/* hidden di cai box login register => nam ngoai cha thi an di */
+.log-box-a {
+    overflow: hidden;
+}
+
+/* hieu ung chuyen dong login register */
+.log-box-a .form-box-a.login-a {
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+    transition-delay: 0.7s;
+
+}
+
+
+/* -------------------------------------------------------------------- */
+.form-box-a h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-box-a .input-box-a {
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+}
+
+.input-box-a input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e4e4e4;
+    padding-right: 28px;
+}
+
+.input-box-a label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-box-a input:focus~label,
+.input-box-a input:valid~label {
+    top: -5px;
+}
+
+.input-box-a .icon-a {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 19px;
+}
+
+.btn-a {
+    width: 100%;
+    height: 45px;
+    background: #c4103d;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
