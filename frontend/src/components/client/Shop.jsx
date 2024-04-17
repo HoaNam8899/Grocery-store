@@ -125,7 +125,6 @@ const Shop = () => {
             let dataSorted = newData.sort(function (a, b) {
                 return new Date(b.create_at) - new Date(a.create_at);
             });
-            console.log(dataSorted);
             setProducts(dataSorted);
         }
     }
