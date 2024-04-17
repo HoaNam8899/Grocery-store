@@ -22,7 +22,6 @@ const Register = () => {
             phone: e.target[4].value,
             address: e.target[5].value,
         }
-        console.log(e.target[1].value)
         try {
             let res = await fetch(baseURL + "/user/register", {
                 method: "POST",
