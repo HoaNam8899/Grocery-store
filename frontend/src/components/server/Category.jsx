@@ -155,7 +155,7 @@ const Category = () => {
                                             <td style={{ width: '5%' }}>category_id</td>
                                             <td style={{ width: '10%' }}>category_name</td>
                                             <td style={{ width: '20%' }}>description</td>
-                                            <td style={{ width: '5%' }}>status</td>
+                                            <td style={{ width: '15%' }}>status</td>
                                             <td style={{ width: '15%' }}>time create</td>
                                             <td style={{ width: '15%' }}>time update</td>
                                             <td />
@@ -258,8 +258,8 @@ const Category = () => {
                                         </Form.Item>
                                         <Form.Item label="status" name="status" >
                                             <Select  >
-                                                <Select.Option value={1}>1</Select.Option>
-                                                <Select.Option value={0}>0</Select.Option>
+                                                <Select.Option value={1}>đang dùng</Select.Option>
+                                                <Select.Option value={0}>khóa</Select.Option>
                                             </Select>
                                         </Form.Item>
                                         <Button type="primary" htmlType="submit">
