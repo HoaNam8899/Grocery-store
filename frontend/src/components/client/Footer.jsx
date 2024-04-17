@@ -33,7 +33,7 @@ const Footer = () => {
                                                 <li><a>Hỏi đáp</a></li>
                                                 <li><a>Thuê mặt bằng</a></li>
                                                 <li><a>Mua phiếu mua hàng</a></li>
-                                                <li><a style={"color:red"} onClick={(e) => handleAdmin(e)}>admin</a></li>
+                                                <li><a style={{ color: "red" }} onClick={(e) => handleAdmin(e)}>admin</a></li>
                                             </ul>
                                         </div>
                                     </div>
