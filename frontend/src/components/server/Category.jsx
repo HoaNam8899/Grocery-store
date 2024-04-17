@@ -228,8 +228,8 @@ const Category = () => {
                                         </Form.Item>
                                         <Form.Item label="status" name="status" >
                                             <Select  >
-                                                <Select.Option value="true">1</Select.Option>
-                                                <Select.Option value="false">0</Select.Option>
+                                                <Select.Option value="true">đang dùng</Select.Option>
+                                                <Select.Option value="false">khóa</Select.Option>
                                             </Select>
                                         </Form.Item>
                                         <Button type="primary" htmlType="submit">
