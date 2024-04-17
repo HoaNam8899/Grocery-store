@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 const AdminLogin = () => {
-
+    const baseURL = 'https://grocery-store-td25.onrender.com';
     const navigate = useNavigate()
 
     const handleLogin = async (e) => {
@@ -12,7 +12,7 @@ const AdminLogin = () => {
         }
 
         try {
-            let res = await fetch("http://localhost:3000/admin", {
+            let res = await fetch(baseURL + "/admin", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
