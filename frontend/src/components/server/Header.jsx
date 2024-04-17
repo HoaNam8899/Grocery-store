@@ -4,7 +4,7 @@ const Header = () => {
     const navigate = useNavigate();
     const handleLogout = (e) => {
         e.preventDefault();
-        navigate("/admin");
+        navigate("/");
     }
     return (
         <>
