@@ -3,7 +3,7 @@ import { IsBoolean, IsEmail, IsNotEmpty, IsNumber, Length, MinLength, minLength 
 export class CreateUserDto {
 
     @IsNotEmpty()
-    @MinLength(6)
+    @MinLength(1)
     username: string
 
     @IsNotEmpty()
