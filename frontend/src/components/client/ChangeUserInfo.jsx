@@ -90,7 +90,7 @@ const ChangeUserInfo = () => {
                         oldPassword: "",
                         confirmPassword: ""
                     });
-                    navigate("/changeUserInfo")
+                    navigate("/")
                 } else {
                     alert("Mật khẩu mới phải từ 8 đến 20 kí tự")
                 }

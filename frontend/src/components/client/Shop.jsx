@@ -83,8 +83,9 @@ const Shop = () => {
         try {
             let response = await fetch(`${baseURL}/category/${id}`);
             let data = await response.json();
-            let newData = data[0].products.filter((i) => i.status === true);
-            setProducts(newData);
+            console.log(data)
+            // let newData = data[0].products.filter((i) => i.status === true);
+            // setProducts(newData);
         } catch (error) {
             console.log(error);
         }
