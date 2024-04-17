@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 const Login = () => {
 
+    const baseURL = 'https://grocery-store-td25.onrender.com';
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -14,7 +16,7 @@ const Login = () => {
         }
 
         try {
-            let res = await fetch("http://localhost:3000/user/login", {
+            let res = await fetch(baseURL + "/user/login", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 const Users = () => {
+    const baseURL = 'https://grocery-store-td25.onrender.com';
 
     const [users, setUsers] = useState([]);
     const [name, setName] = useState({
@@ -10,7 +11,7 @@ const Users = () => {
 
     const fetchUser = async () => {
         try {
-            let response = await fetch("http://localhost:3000/user");
+            let response = await fetch(baseURL + "/user");
             let data = await response.json();
             setUsers(data);
         } catch (error) {
@@ -25,7 +26,7 @@ const Users = () => {
     const handleDelate = async (e, id) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://localhost:3000/user/softDelete/${id}`, {
+            let res = await fetch(`${baseURL}/user/softDelete/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json",
@@ -39,7 +40,7 @@ const Users = () => {
     const handleUpdate = async (e, id) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://localhost:3000/user/softUpdate/${id}`, {
+            let res = await fetch(`${baseURL}/user/softUpdate/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json",

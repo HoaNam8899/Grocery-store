@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 const Register = () => {
 
+    const baseURL = 'https://grocery-store-td25.onrender.com';
     // const [newUser, setNewUser] = useState([]);
 
     const navigate = useNavigate()
@@ -22,7 +23,7 @@ const Register = () => {
             address: e.target[5].value,
         }
         try {
-            let res = await fetch("http://localhost:3000/user/register", {
+            let res = await fetch(baseURL + "/user/register", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

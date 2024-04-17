@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import transCurrency from '../../../public/constant/transCurency';
 
 const Order = () => {
+
+    const baseURL = 'https://grocery-store-td25.onrender.com';
+
     const userLogin = useSelector(status => status.userLogin) || [];
 
     const [productOrders, setOrders] = useState([]);
@@ -12,7 +15,7 @@ const Order = () => {
 
     const fetchOrder = async () => {
         try {
-            let response = await fetch(`http://localhost:3000/user/userOrder/${userLogin.user_id}`);
+            let response = await fetch(`${baseURL}/user/userOrder/${userLogin.user_id}`);
             let data = await response.json();
             setOrders(data);
             // console.log(data)

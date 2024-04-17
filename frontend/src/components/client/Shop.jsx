@@ -6,6 +6,7 @@ import transCurrency from '../../../public/constant/transCurency'
 
 
 const Shop = () => {
+    const baseURL = 'https://grocery-store-td25.onrender.com';
 
     const [products, setProducts] = useState([]);
     // console.log(products)
@@ -21,7 +22,7 @@ const Shop = () => {
 
     const fetchProduct = async () => {
         try {
-            let response = await fetch("http://localhost:3000/product");
+            let response = await fetch(baseURL + "/product");
             let data = await response.json();
             let newData = data.filter((i) => i.status === true);
             setProducts(newData);
@@ -80,7 +81,7 @@ const Shop = () => {
     const handleGetOneCategory = async (e, id) => {
         e.preventDefault();
         try {
-            let response = await fetch(`http://localhost:3000/category/${id}`);
+            let response = await fetch(`${baseURL}/category/${id}`);
             let data = await response.json();
             let newData = data[0].products.filter((i) => i.status === true);
             setProducts(newData);
@@ -91,7 +92,7 @@ const Shop = () => {
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        let response = await fetch("http://localhost:3000/product");
+        let response = await fetch(baseURL + "/product");
         let data = await response.json();
         const returnData = data?.filter((i) => { return stringToSlug(i.product_name).includes(stringToSlug(searchProduct.product_name)) && i.status === true })
         console.log(returnData)
@@ -101,7 +102,7 @@ const Shop = () => {
     const handleSort = async (e) => {
         e.preventDefault();
 
-        let response = await fetch("http://localhost:3000/product");
+        let response = await fetch(baseURL + "/product");
         let data = await response.json();
         let newData = data.filter((i) => i.status === true);
 

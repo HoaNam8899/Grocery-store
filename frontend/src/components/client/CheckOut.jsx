@@ -5,6 +5,8 @@ import transCurrency from '../../../public/constant/transCurency';
 
 const CheckOut = () => {
 
+    const baseURL = 'https://grocery-store-td25.onrender.com';
+
     const products = useSelector(state => state.miniCart) || [];
     const userLogin = useSelector(status => status.userLogin) || [];
 
@@ -36,7 +38,7 @@ const CheckOut = () => {
             user_id: userLogin.user_id
         }
         try {
-            let res = await fetch("http://localhost:3000/order", {
+            let res = await fetch(baseURL + "/order", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

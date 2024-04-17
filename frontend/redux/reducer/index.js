@@ -14,7 +14,6 @@ const persistConfig = {
 }
 
 
-
 const reducers = combineReducers({
     detailsId: detailsProductReducer,
     miniCart: addProductReducer,

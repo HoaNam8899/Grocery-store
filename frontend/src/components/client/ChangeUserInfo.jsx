@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const ChangeUserInfo = () => {
+    const baseURL = 'https://grocery-store-td25.onrender.com';
 
     const userLogin = useSelector(status => status.userLogin) || [];
     const [changeInfo, setChangInfo] = useState({
@@ -29,7 +30,7 @@ const ChangeUserInfo = () => {
                 address: changeInfo.address === "" ? userLogin.address : changeInfo.address
             }
             try {
-                let res = await fetch(`http://localhost:3000/user/update/${userLogin.user_id}`, {
+                let res = await fetch(`${baseURL}/user/update/${userLogin.user_id}`, {
                     method: "PATCH",
                     headers: {
                         "Content-type": "application/json",
@@ -69,7 +70,7 @@ const ChangeUserInfo = () => {
                 oldPassword: changePassword.oldPassword
             }
             try {
-                let res = await fetch(`http://localhost:3000/user/updatePass/${userLogin.user_id}`, {
+                let res = await fetch(`${baseURL}/user/updatePass/${userLogin.user_id}`, {
                     method: "PATCH",
                     headers: {
                         "Content-type": "application/json",

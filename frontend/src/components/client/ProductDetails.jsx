@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import transCurrency from '../../../public/constant/transCurency';
 
 const ProductDetails = () => {
+  const baseURL = 'https://grocery-store-td25.onrender.com';
+
   const productId = useSelector(state => state.detailsId) || [];
   const userLogin = useSelector(status => status.userLogin) || [];
   const [product, setProduct] = useState([]);
@@ -13,7 +15,7 @@ const ProductDetails = () => {
 
   const fetchProduct = async () => {
     try {
-      let response = await fetch("http://localhost:3000/product/" + `${productId}`);
+      let response = await fetch(baseURL + "/product/" + `${productId}`);
       let data = await response.json();
       setProduct(data);
     } catch (error) {

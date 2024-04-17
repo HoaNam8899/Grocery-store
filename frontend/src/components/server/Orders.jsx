@@ -4,14 +4,14 @@ import transCurrency from '../../../public/constant/transCurency';
 import stringToSlug from '../../../public/constant/slug';
 
 const Orders = () => {
-
+    const baseURL = 'https://grocery-store-td25.onrender.com';
     const [orders, setOrders] = useState([]);
     const [orderProducts, setOrderProducts] = useState([])
     const [searchOrder, setSearchOrder] = useState([])
 
     const fetchOrder = async () => {
         try {
-            let response = await fetch("http://localhost:3000/order");
+            let response = await fetch(baseURL + "/order");
             let data = await response.json();
             setOrders(data);
         } catch (error) {
@@ -54,7 +54,7 @@ const Orders = () => {
         }
         data.status = Number(data.status);
         try {
-            let res = await fetch(`http://localhost:3000/order`, {
+            let res = await fetch(baseURL + `/order`, {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json",
@@ -113,7 +113,7 @@ const Orders = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         if (searchOrder.length !== 0) {
-            let response = await fetch("http://localhost:3000/order");
+            let response = await fetch(baseURL + "/order");
             let data = await response.json();
             const returnData = data?.filter((i) => { return stringToSlug(i.receive_name).includes(stringToSlug(searchOrder[0].receive_name)) })
             setOrders(returnData);

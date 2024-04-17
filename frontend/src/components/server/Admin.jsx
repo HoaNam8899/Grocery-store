@@ -6,6 +6,7 @@ import stringToSlug from '../../../public/constant/slug';
 import transCurrency from '../../../public/constant/transCurency';
 
 const Admin = () => {
+    const baseURL = 'https://grocery-store-td25.onrender.com';
     const navigate = useNavigate();
     let [products, setProducts] = useState([]);
     let [updateProduct, setUpdateProduct] = useState();
@@ -19,7 +20,7 @@ const Admin = () => {
 
     const fetchProduct = async () => {
         try {
-            let response = await fetch("http://localhost:3000/product/all");
+            let response = await fetch(baseURL + "/product/all");
             let data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -34,7 +35,7 @@ const Admin = () => {
     const handleDelete = async (e, id) => {
         e.preventDefault();
         try {
-            let res = await fetch("http://localhost:3000/product", {
+            let res = await fetch(baseURL + "/product", {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json",
@@ -61,7 +62,7 @@ const Admin = () => {
 
     const handleUpdate = async (e, id) => {
         e.preventDefault();
-        let response = await fetch(`http://localhost:3000/product/${id}`);
+        let response = await fetch(`${baseURL}/product/${id}`);
         let data = await response.json();
         setUpdateProduct({
             status: `${data.status}`
@@ -81,7 +82,7 @@ const Admin = () => {
     };
     const onFinish = async (data) => {
         try {
-            let res = await fetch("http://localhost:3000/product", {
+            let res = await fetch(baseURL + "/product", {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json",
@@ -99,7 +100,7 @@ const Admin = () => {
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        let response = await fetch("http://localhost:3000/product/all");
+        let response = await fetch(baseURL + "/product/all");
         let data = await response.json();
         if (searchProduct.product_name === "") {
             setProducts(data);
@@ -136,7 +137,7 @@ const Admin = () => {
 
     const handleSearchOption = async (e) => {
         e.preventDefault();
-        let response = await fetch("http://localhost:3000/product/all");
+        let response = await fetch(baseURL + "/product/all");
         let data = await response.json();
         const numberOption = e.target.value;
         if (numberOption === "0") {

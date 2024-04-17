@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Popup from 'reactjs-popup'
 const AddProduct = () => {
+    const baseURL = 'https://grocery-store-td25.onrender.com';
+
     const navigate = useNavigate()
     const [data, setData] = useState({})
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch("http://localhost:3000/product", {
+            let res = await fetch(baseURL + "/product", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",

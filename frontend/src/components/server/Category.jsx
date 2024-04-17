@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react'
 import { Button, Space, Table, Modal, Form, Input, Pagination, Select } from 'antd';
 
 const Category = () => {
-
+    const baseURL = 'https://grocery-store-td25.onrender.com';
     const [category, setCategory] = useState([]);
     const [categoryStatus, setCategoryStatus] = useState();
 
     const fetchCategory = async () => {
         try {
-            let response = await fetch("http://localhost:3000/category");
+            let response = await fetch(baseURL + "/category");
             let data = await response.json();
             setCategory(data);
         } catch (error) {
@@ -25,7 +25,7 @@ const Category = () => {
     const handleDelete = async (e, id) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://localhost:3000/category/${id}`, {
+            let res = await fetch(`${baseURL}/category/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json",
@@ -69,7 +69,7 @@ const Category = () => {
     const onFinish = async (data) => {
 
         try {
-            let res = await fetch(`http://localhost:3000/category/update`, {
+            let res = await fetch(baseURL + "/category/update", {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json",
@@ -99,7 +99,7 @@ const Category = () => {
     const onFinishAdd = async (data) => {
         // console.log(data)
         try {
-            let res = await fetch(`http://localhost:3000/category`, {
+            let res = await fetch(baseURL + `/category`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
