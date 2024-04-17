@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const ChangeUserInfo = () => {
+
     const baseURL = 'https://grocery-store-td25.onrender.com';
+    const navigate = useNavigate();
 
     const userLogin = useSelector(status => status.userLogin) || [];
     const [changeInfo, setChangInfo] = useState({
@@ -88,7 +90,7 @@ const ChangeUserInfo = () => {
                         oldPassword: "",
                         confirmPassword: ""
                     });
-                    window.location.reload();
+                    navigate("/changeUserInfo")
                 } else {
                     alert("Mật khẩu mới phải từ 8 đến 20 kí tự")
                 }
