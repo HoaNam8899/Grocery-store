@@ -175,37 +175,37 @@ const Shop = () => {
                                             <span>Tất cả sản phẩm</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 4)}
+                                            onClick={(e) => handleGetOneCategory(e, 1)}
                                         >
                                             <span>Rau, củ, quả</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 5)}
+                                            onClick={(e) => handleGetOneCategory(e, 2)}
                                         >
                                             <span>Thịt,cá, hải sản</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 6)}
+                                            onClick={(e) => handleGetOneCategory(e, 3)}
                                         >
                                             <span>Hàng đông lạnh</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 7)}
+                                            onClick={(e) => handleGetOneCategory(e, 4)}
                                         >
                                             <span>Sữa tươi, sữa chua</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 8)}
+                                            onClick={(e) => handleGetOneCategory(e, 5)}
                                         >
                                             <span>Bánh, kẹo</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 9)}
+                                            onClick={(e) => handleGetOneCategory(e, 6)}
                                         >
                                             <span>Mì gói, bún, cháo</span>
                                         </div>
                                         <div className="category-item d-flex align-items-center justify-content-between"
-                                            onClick={(e) => handleGetOneCategory(e, 10)}
+                                            onClick={(e) => handleGetOneCategory(e, 7)}
                                         >
                                             <span>Kem, đồ lạnh</span>
                                         </div>
